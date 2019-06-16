@@ -1,17 +1,24 @@
 <h1>My Projects</h1>
 
-<%= link_to 'Add new project', new_project_path %>
+<%= link_to 'Add new project', new_project_path ,class:"btn btn-secondary btn-lg btn-block"%>
+<hr>
 
-
-
-  <% @projects.each do |project| %>
-    <p>
-    <%= project.title %>
-    <%= project.description %>
-    <%= link_to 'Show', project %> |
-    <%= link_to 'Edit', edit_project_path(project) %> |
-    <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-  <% end %>
+<% @projects.each do |project| %>
+	<div class="jumbotron text-center" style="background-color: #fde4e4;">
+	<h2><%= link_to project.title, project %></h2>
+	<p><%= project.description %>
+	<br>
+	(Added <%= time_ago_in_words(project.created_at) %> ago)
+	</p>
+	<p>
+	 <%# <%= link_to 'Show', project %>
+	 <div class="btn-group" role="group">
+	 <%= link_to 'Edit', edit_project_path(project) , class:"btn btn-outline-dark btn-sm"%>
+	 <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-outline-dark btn-sm"%>
+	 </div>
+	</p>
+	</div>
+	<hr>
+<% end %>
 
 

@@ -1,6 +1,9 @@
+
 <h1>Editing Project</h1>
-
+<br>
 <%= render 'form', project: @project %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<br>
+<div class="btn-group" role="group">
+<%= link_to 'Show', @project , class:"btn btn-outline-dark btn-sm"%>
+<%= link_to 'Back', projects_path , class:"btn btn-outline-dark btn-sm"%>
+</div>

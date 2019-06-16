@@ -1,14 +1,16 @@
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<div class="jumbotron text-center" style="background-color: #fde4e4;">
+    <h2>
+    <%= @project.title %>
+    </h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+    <p>
+    <%= @project.description %>
+    </p>
 
 
-<%= link_to 'Edit', edit_project_path(@project) %> | 
-<%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', projects_path %>
+    <div class="btn-group" role="group">
+    <%= link_to 'Edit', edit_project_path(@project) , class:"btn btn-outline-dark btn-sm"%> 
+    <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-outline-dark btn-sm"%> 
+    <%= link_to 'Back', projects_path , class:"btn btn-outline-dark btn-sm"%>
+    </div>
+</div>
