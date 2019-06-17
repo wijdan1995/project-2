@@ -1,5 +1,5 @@
 <h1>My Projects</h1>
-
+<br>
 <%= link_to 'Add new project', new_project_path ,class:"btn btn-secondary btn-lg btn-block"%>
 <hr>
 <div class="card-columns">
@@ -7,7 +7,7 @@
 		<div class="card main-view">
 			<div class="card-body">
 				<h2 class="card-title">
-					<%= link_to project.title, project %>
+					<%= link_to project.title, project ,class:"text-dark"%>
 				</h2>
 				<p class="card-text">
 					<%= project.description %>

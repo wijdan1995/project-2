@@ -1,0 +1,8 @@
+<%= form_with(model: [ @project, @project.tasks.build ], local: true) do |form| %>
+    <p>
+        <%= form.text_field :content %>
+    </p>
+    <p>
+        <%= form.submit class:"btn btn-secondary" %>
+    </p>
+<% end %>

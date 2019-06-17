@@ -1,4 +1,4 @@
-<div class="jumbotron text-center" style="background-color: #fde4e4;">
+<div class="jumbotron main-view">
     <h2>
     <%= @project.title %>
     </h2>
@@ -6,6 +6,12 @@
     <p>
     <%= @project.description %>
     </p>
+
+    <h4>Tasks</h2>
+    <%= render @project.tasks %>
+
+    <h5>Add Tasks</h2>
+    <%= render 'tasks/form' %>
 
 
     <div class="btn-group" role="group">
