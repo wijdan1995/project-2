@@ -20,7 +20,8 @@
 					</div>
 				</p>
 				<div class="card-footer">
-					Added <%= time_ago_in_words(project.created_at) %> ago
+				<p>Deadline on <%= (project.deadline)%> </p>
+				Added <%= time_ago_in_words(project.created_at) %> ago
 				</div>
 			</div>
 		</div>
