@@ -16,11 +16,19 @@
  *
  */
 
- .main-view{
-    background-color: #fde4e4;
- }
+body {
+   background: image-url('bg.png');
+}
 
- .sub-view{
-   background-color: #FFFCFC;
+.home-view{
+  background-color: #fcd7d7;
+}
+
+.main-view{
+    background-color: #FCE7EB;
+}
+
+.sub-view{
+   background-color: #fdf5f7;
 }
 

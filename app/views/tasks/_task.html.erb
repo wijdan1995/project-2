@@ -1,14 +1,10 @@
 <div class="row">
-    
-
     <p class="col-md-8">
-        
         <strong>▸</strong>
         <%= task.content %>
-        <%= link_to 'Delete', [task.project, task],
-                method: :delete,
-                data: { confirm: 'Are you sure?' } , class:"badge badge-pill badge-secondary"%>
-
     </p>
-
+    <span><%= link_to 'Delete', [task.project, task],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } , class:"badge badge-pill badge-secondary "%>
+    </span>
 </div>
