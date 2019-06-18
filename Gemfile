@@ -44,6 +44,10 @@ gem 'bootstrap', '~> 4.3.1'
 # https://github.com/rails/jquery-rails
 gem 'jquery-rails'
 
+## Administrate to add admin page
+#http://administrate-prototype.herokuapp.com/
+gem "administrate"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
