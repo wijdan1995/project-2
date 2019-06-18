@@ -7,12 +7,13 @@
     <%= @project.description %>
     </p>
 
-    <h4>Tasks</h2>
-    <%= render @project.tasks %>
+   <div class="jumbotron sub-view">
+        <h4>Tasks</h2>
+        <%= render @project.tasks %>
 
-    <h5>Add Tasks</h2>
-    <%= render 'tasks/form' %>
-
+        <h5>Add Tasks</h2>
+        <%= render 'tasks/form' %>
+    </div>
 
     <div class="btn-group" role="group">
     <%= link_to 'Edit', edit_project_path(@project) , class:"btn btn-outline-dark btn-sm"%> 
