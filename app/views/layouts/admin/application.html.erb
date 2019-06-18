@@ -52,14 +52,17 @@ By default, it renders:
       </div>
     </nav>
   
-
+  
   <div class="app-container">
+  <div class="container">
     <%= render "navigation" -%>
 
     <main class="main-content" role="main">
       <%= render "flashes" -%>
+
       <%= yield %>
     </main>
+    </div> 
   </div>
 
   <%= render "javascript" %>
