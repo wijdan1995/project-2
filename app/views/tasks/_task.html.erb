@@ -1,26 +1,34 @@
 <div class="row">
     <% if task.completed? %>
-        <p class="col-md-11">
+        <p class="col-md-12">
             <strong>▸</strong>
             <span class="completed"><%= task.content %></span>
-        <span class="col-md-1">
-                <%= link_to 'Delete', [task.project, task],
-                        method: :delete,
-                        data: { confirm: 'Are you sure?' } , class:"badge badge-pill badge-secondary"%>
+        <span class="col-md-12">
+                <%= link_to [task.project, task],
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } do %>
+                    <i class="fas fa-trash-alt"></i>
+                    <% end %>
         </span> 
         </p>
     <% else %>
-        <p class="col-md-11">
+        <p class="col-md-12">
             <strong>▸</strong>
             <%= task.content %>
-        <span class="col-md-1">
-        <%= link_to "Complete", complete_project_task_path(@project , task.id), 
+        <span class="col-md-12">
+        <%= link_to complete_project_task_path(@project , task.id), 
                 method: :patch ,
-                data: { confirm: 'Are you sure?' } , class:"badge badge-pill badge-secondary"%>
-        <%= link_to "Edit", edit_project_task_path(@project_id , task.id) , class:"badge badge-pill badge-secondary"%>
-            <%= link_to 'Delete', [task.project, task],
+                data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-check"> | </i>
+                <% end %>
+        <%= link_to edit_project_task_path(@project_id , task.id) do %>
+            <i class="fas fa-pencil-alt"> | </i>
+            <% end %>
+            <%= link_to [task.project, task],
                     method: :delete,
-                    data: { confirm: 'Are you sure?' } , class:"badge badge-pill badge-secondary"%>
+                    data: { confirm: 'Are you sure?' } do %>
+                    <i class="fas fa-trash-alt"></i>
+                    <% end %>
             </span> 
         </p>
     <% end %>        
