@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project_id = params[:id]
   end
 
   def new
